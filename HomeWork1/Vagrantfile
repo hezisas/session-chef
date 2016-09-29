@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = '1024'
+    vb.cpus = '2'
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    set -e
+
+    apt-get update
+
+    debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password password root'
+    debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password_again password root'
+
+    apt-get install -y --allow-unauthenticated apache2 unzip mysql-server-5.6
+
+    mkdir -p /opt/master
+    cd /opt/master
+
+    if ! [ -d "/opt/master/Awesome-Appliance-Repair-master" ]
+    then
+      wget https://github.com/colincam/Awesome-Appliance-Repair/archive/master.zip
+      unzip master.zip
+
+      cd Awesome-Appliance-Repair-master
+      mv AAR /var/www/
+    fi
+
+    ### add chef stuff
+    mkdir -p /etc/chef/cookbooks
+    cat <<<'
+log_level              :info
+log_location           STDOUT
+verbose_logging        false
+cookbook_path ["/etc/chef/cookbooks"]
+    '> /etc/chef/solo.rb
+    knife cookbook create my-first-cookbook -o /etc/chef/cookbooks
+  SHELL
+end
