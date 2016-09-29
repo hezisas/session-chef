@@ -1,7 +1,7 @@
 # Chef Sessions
 
 ## Home Work 1 - Convert python script to a chef recipe
-The python script `AARinstall.py` should be converted to a chef recipe, use the following steps:
+The python script `AARinstall.py` (mysql password is 'root') should be converted to a chef recipe, use the following steps:
 
 1. cd into HomeWork1
 
