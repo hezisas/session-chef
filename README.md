@@ -15,5 +15,18 @@
 6. Destroy the local VM.
 
 ## Home Work 1 - Convert python script to a chef recipe
-The python script `AARinstall.py` (mysql password is 'root') should be converted to a chef recipe, use the following steps:
+The python script `AARinstall.py`  (mysql password is 'root') should be converted to a chef recipe, use the following steps:
+
+1. cd into HomeWork1
+
+2. start the local vm to develop on - `vagrant up`
+
+3. update the default recipe in the cookbook (cookbooks/my-first-cookbook/recipes/default.rb)
+
+4. run the updated cookbook on the vm - `vagrant provision`
+
+5. verify the application is up at `http://localhost:8080/` and you can log in
+
+
+* AARinstall.py begins with a comment of the steps it executes
 
