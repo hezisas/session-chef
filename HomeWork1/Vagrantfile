@@ -11,36 +11,42 @@ Vagrant.configure(2) do |config|
     vb.cpus = '2'
   end
 
+  config.omnibus.chef_version = '12.9.41'
+
   config.vm.provision "shell", inline: <<-SHELL
     set -e
 
-    apt-get update
+    if ! [ "$(dpkg -l |grep mysql-server)" ]
+    then
 
-    debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password password root'
-    debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password_again password root'
-
-    apt-get install -y --allow-unauthenticated apache2 unzip mysql-server-5.6
-
-    mkdir -p /opt/master
-    cd /opt/master
+      debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password password root'
+      debconf-set-selections <<< 'mysql-server-5.6 mysql-server/root_password_again password root'
+      apt-get install -y --allow-unauthenticated apache2 unzip mysql-server-5.6 python2.7-dev
+    fi
 
     if ! [ -d "/opt/master/Awesome-Appliance-Repair-master" ]
     then
+
+      mkdir -p /opt/master
+      cd /opt/master
       wget https://github.com/colincam/Awesome-Appliance-Repair/archive/master.zip
       unzip master.zip
 
       cd Awesome-Appliance-Repair-master
       mv AAR /var/www/
+      chown -R www-data:www-data /var/www/AAR
+      rm -f /etc/apache2/sites-enabled/*
     fi
-
-    ### add chef stuff
-    mkdir -p /etc/chef/cookbooks
-    cat <<<'
-log_level              :info
-log_location           STDOUT
-verbose_logging        false
-cookbook_path ["/etc/chef/cookbooks"]
-    '> /etc/chef/solo.rb
-    knife cookbook create my-first-cookbook -o /etc/chef/cookbooks
   SHELL
+
+  config.vm.provision 'chef_solo' do |chef|
+    chef.add_recipe 'my-first-cookbook-done'
+    chef.cookbooks_path = 'cookbooks'
+  end
+
+  #config.vm.provision 'shell', inline: <<-SHELL
+  #  set -e
+  #  cd /vagrant
+  #  echo "root" | ./AARinstall.py
+  #SHELL
 end
