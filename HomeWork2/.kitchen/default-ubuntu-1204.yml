@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2201'
+username: vagrant
+ssh_key: "/home/hezi/repos/session-chef/HomeWork2/.kitchen/kitchen-vagrant/kitchen-HomeWork2-default-ubuntu-1204/.vagrant/machines/default/virtualbox/private_key"
+last_action: create

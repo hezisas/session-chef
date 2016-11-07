@@ -1,0 +1,23 @@
+root@outbrain:/home/hezi/repos/session-chef/HomeWork1/cookbooks/my-first-cookbook/spec>chef exec rspec default_spec.rb
+.F.
+
+Failures:
+
+  1) my-first-cookbook::default restarts apache2 service on config change
+     Failure/Error: expect(conf_file).to notify('service[apache2]').to(:restart).delayed
+
+       expected "template[/etc/apache2/sites-enabled/AAR-apache.conf]" to notify "service[apache2]" with action :restart delayed, but did not.
+
+       Other notifications were:
+
+
+        
+     # ./default_spec.rb:20:in `block (2 levels) in <top (required)>'
+
+Finished in 0.27379 seconds (files took 4.23 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./default_spec.rb:18 # my-first-cookbook::default restarts apache2 service on config change
+

@@ -19,6 +19,8 @@ execute 'install python package flask' do
 	not_if { File.exist?('/usr/local/bin/flask')}
 end
 
+
+
 cookbook_file '/etc/apache2/sites-enabled/AAR-apache.conf' do 
 	action :create 
 	owner 'root'
@@ -49,7 +51,7 @@ end
 
 execute 'make_AARdb' do
 	action :nothing
-        command 'mysql -proot < /tmp/make_AARdb.sql'
+     	command 'mysql -proot < /tmp/make_AARdb.sql'
 end
 
 execute 'CREATE USER' do
@@ -57,7 +59,6 @@ execute 'CREATE USER' do
 	command "mysql -proot -e \"CREATE USER 'aarapp'@'localhost' IDENTIFIED BY '7ERwzg7E'\""
 end
 
-template '/etc/apache2/sites-enabled/AAR-apache.conf' do
-  	action :create
-	notifies :restart, 'service[apache2]', :delayed
-end
+#service 'apache2' do
+  	#action [:start, :enable]
+#end

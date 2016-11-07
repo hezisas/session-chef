@@ -7,21 +7,20 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-template '/opt/test-task1.txt'
 
-template '/opt/test-task1.txt' do
+template '/opt/opsSchool/test-task1.txt' do
   source 'test-task1.erb'
   variables({
-	:package_name => "unzip",
-	:package_version => "6.0-9ubuntu1.5"
+	:package_name =>['mycookbook']['package_name'],
+	:package_version =>['mycookbook']['package_version'],
   })
   action :create
   owner 'root'
   group 'root'
 end
 
-package 'unzip' do
-  version '6.0-9ubuntu1.5'
+package node['mycookbook']['package_name'] do
+  version node['mycookbook']['package_verison']
   action :install
 end
 

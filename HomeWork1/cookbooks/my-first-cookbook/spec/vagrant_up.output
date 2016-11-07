@@ -1,0 +1,569 @@
+root@outbrain:/home/hezi/repos/session-chef/HomeWork1>vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: A newer version of the box 'ubuntu/trusty64' is available! You currently
+==> default: have version '20161020.0.8'. The latest is version '20161103.0.0'. Run
+==> default: `vagrant box update` to update.
+==> default: Setting the name of the VM: HomeWork1_default_1478543827770_87958
+==> default: Clearing any previously set forwarded ports...
+==> default: Auto-generating node name for Chef...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 80 (guest) => 8080 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Mounting shared folders...
+    default: /vagrant => /home/hezi/repos/session-chef/HomeWork1
+    default: /tmp/vagrant-chef/2d05d668f963853fa5743ece0e4ee7f9/cookbooks => /home/hezi/repos/session-chef/HomeWork1/cookbooks
+==> default: Installing Chef 12.9.41 Omnibus package...
+==> default: 
+==> default: ubuntu 14.04 x86_64
+==> default: Getting information for chef stable 12.9.41 for ubuntu...
+==> default: downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=12.9.41&p=ubuntu&pv=14.04&m=x86_64
+==> default:   to file /tmp/install.sh.1943/metadata.txt
+==> default: trying wget...
+==> default: sha1	7fa9fec0ea5d3b6de8bfaed8798a77f3fab2f2a3
+==> default: sha256	4ce410534c1d967e5919ac759eb1f31603c063b3a682ac8b7e0ca08657d356a9
+==> default: url	https://packages.chef.io/files/stable/chef/12.9.41/ubuntu/14.04/chef_12.9.41-1_amd64.deb
+==> default: version	12.9.41
+
+==> default: downloaded metadata file looks valid...
+==> default: downloading https://packages.chef.io/files/stable/chef/12.9.41/ubuntu/14.04/chef_12.9.41-1_amd64.deb
+==> default:   to file /tmp/install.sh.1943/chef_12.9.41-1_amd64.deb
+==> default: trying wget...
+==> default: Comparing checksum with sha256sum...
+==> default: Installing chef 12.9.41
+==> default: installing with dpkg...
+==> default: (Reading database ... 62997 files and directories currently installed.)
+==> default: Preparing to unpack .../chef_12.9.41-1_amd64.deb ...
+==> default:  * Stopping chef-client chef-client
+==> default:    ...done.
+==> default: Unpacking chef (12.9.41-1) over (11.8.2-2) ...
+==> default: dpkg: warning: unable to delete old directory '/var/log/chef': Directory not empty
+==> default: dpkg: warning: unable to delete old directory '/etc/chef': Directory not empty
+==> default: Setting up chef (12.9.41-1) ...
+==> default: Thank you for installing Chef!
+==> default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: stdin: is not a tty
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: The following packages were automatically installed and are no longer required:
+==> default:   chef-zero erubis ohai ruby-diff-lcs ruby-erubis ruby-hashie ruby-highline
+==> default:   ruby-ipaddress ruby-mime-types ruby-mixlib-authentication ruby-mixlib-cli
+==> default:   ruby-mixlib-config ruby-mixlib-log ruby-mixlib-shellout ruby-net-ssh
+==> default:   ruby-net-ssh-gateway ruby-net-ssh-multi ruby-rack ruby-rest-client
+==> default:   ruby-sigar ruby-systemu ruby-yajl
+==> default: Use 'apt-get autoremove' to remove them.
+==> default: The following extra packages will be installed:
+==> default:   apache2-bin apache2-data libaio1 libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+==> default:   libaprutil1-ldap libdbd-mysql-perl libdbi-perl libexpat1-dev
+==> default:   libhtml-template-perl libmysqlclient18 libpython2.7-dev libterm-readkey-perl
+==> default:   mysql-client-5.6 mysql-client-core-5.6 mysql-common mysql-common-5.6
+==> default:   mysql-server-core-5.6 ssl-cert
+==> default: Suggested packages:
+==> default:   apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+==> default:   libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
+==> default:   libsql-statement-perl libipc-sharedcache-perl mailx tinyca openssl-blacklist
+==> default:   zip
+==> default: The following NEW packages will be installed:
+==> default:   apache2 apache2-bin apache2-data libaio1 libapr1 libaprutil1
+==> default:   libaprutil1-dbd-sqlite3 libaprutil1-ldap libdbd-mysql-perl libdbi-perl
+==> default:   libexpat1-dev libhtml-template-perl libmysqlclient18 libpython2.7-dev
+==> default:   libterm-readkey-perl mysql-client-5.6 mysql-client-core-5.6 mysql-common
+==> default:   mysql-common-5.6 mysql-server-5.6 mysql-server-core-5.6 python2.7-dev
+==> default:   ssl-cert unzip
+==> default: 0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 45.4 MB of archives.
+==> default: After this operation, 207 MB of additional disk space will be used.
+==> default: Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libaio1 amd64 0.3.109-4 [6,364 B]
+==> default: Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+==> default: Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+==> default: Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-common all 5.5.53-0ubuntu0.14.04.1 [13.0 kB]
+==> default: Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libmysqlclient18 amd64 5.5.53-0ubuntu0.14.04.1 [597 kB]
+==> default: Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libexpat1-dev amd64 2.1.0-4ubuntu1.3 [115 kB]
+==> default: Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libpython2.7-dev amd64 2.7.6-8ubuntu0.2 [22.0 MB]
+==> default: Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libdbi-perl amd64 1.630-1 [879 kB]
+==> default: Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libdbd-mysql-perl amd64 4.025-1ubuntu0.1 [87.6 kB]
+==> default: Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libterm-readkey-perl amd64 2.31-1 [27.4 kB]
+==> default: Get:11 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-client-core-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [4,133 kB]
+==> default: Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-client-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [5,555 kB]
+==> default: Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-server-core-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [4,620 kB]
+==> default: Get:14 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-server-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [5,602 kB]
+==> default: Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+==> default: Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8,634 B]
+==> default: Get:17 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.13 [839 kB]
+==> default: Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.13 [160 kB]
+==> default: Get:19 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.13 [87.4 kB]
+==> default: Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libhtml-template-perl all 2.95-1 [65.5 kB]
+==> default: Get:21 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-common-5.6 all 5.6.33-0ubuntu0.14.04.1 [12.0 kB]
+==> default: Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main python2.7-dev amd64 2.7.6-8ubuntu0.2 [269 kB]
+==> default: Get:23 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+==> default: Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main unzip amd64 6.0-9ubuntu1.5 [157 kB]
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Fetched 45.4 MB in 15s (2,852 kB/s)
+==> default: Selecting previously unselected package libaio1:amd64.
+==> default: (Reading database ... 78061 files and directories currently installed.)
+==> default: Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...
+==> default: Unpacking libaio1:amd64 (0.3.109-4) ...
+==> default: Selecting previously unselected package libapr1:amd64.
+==> default: Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+==> default: Unpacking libapr1:amd64 (1.5.0-1) ...
+==> default: Selecting previously unselected package libaprutil1:amd64.
+==> default: Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package mysql-common.
+==> default: Preparing to unpack .../mysql-common_5.5.53-0ubuntu0.14.04.1_all.deb ...
+==> default: Unpacking mysql-common (5.5.53-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package libmysqlclient18:amd64.
+==> default: Preparing to unpack .../libmysqlclient18_5.5.53-0ubuntu0.14.04.1_amd64.deb ...
+==> default: Unpacking libmysqlclient18:amd64 (5.5.53-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package libexpat1-dev:amd64.
+==> default: Preparing to unpack .../libexpat1-dev_2.1.0-4ubuntu1.3_amd64.deb ...
+==> default: Unpacking libexpat1-dev:amd64 (2.1.0-4ubuntu1.3) ...
+==> default: Selecting previously unselected package libpython2.7-dev:amd64.
+==> default: Preparing to unpack .../libpython2.7-dev_2.7.6-8ubuntu0.2_amd64.deb ...
+==> default: Unpacking libpython2.7-dev:amd64 (2.7.6-8ubuntu0.2) ...
+==> default: Selecting previously unselected package libdbi-perl.
+==> default: Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...
+==> default: Unpacking libdbi-perl (1.630-1) ...
+==> default: Selecting previously unselected package libdbd-mysql-perl.
+==> default: Preparing to unpack .../libdbd-mysql-perl_4.025-1ubuntu0.1_amd64.deb ...
+==> default: Unpacking libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+==> default: Selecting previously unselected package libterm-readkey-perl.
+==> default: Preparing to unpack .../libterm-readkey-perl_2.31-1_amd64.deb ...
+==> default: Unpacking libterm-readkey-perl (2.31-1) ...
+==> default: Selecting previously unselected package mysql-client-core-5.6.
+==> default: Preparing to unpack .../mysql-client-core-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+==> default: Unpacking mysql-client-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package mysql-client-5.6.
+==> default: Preparing to unpack .../mysql-client-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+==> default: Unpacking mysql-client-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package mysql-server-core-5.6.
+==> default: Preparing to unpack .../mysql-server-core-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+==> default: Unpacking mysql-server-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> default: Setting up mysql-common (5.5.53-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package mysql-server-5.6.
+==> default: (Reading database ... 78591 files and directories currently installed.)
+==> default: Preparing to unpack .../mysql-server-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+==> default: Unpacking mysql-server-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+==> default: Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package libaprutil1-ldap:amd64.
+==> default: Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package apache2-bin.
+==> default: Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.13_amd64.deb ...
+==> default: Unpacking apache2-bin (2.4.7-1ubuntu4.13) ...
+==> default: Selecting previously unselected package apache2-data.
+==> default: Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.13_all.deb ...
+==> default: Unpacking apache2-data (2.4.7-1ubuntu4.13) ...
+==> default: Selecting previously unselected package apache2.
+==> default: Preparing to unpack .../apache2_2.4.7-1ubuntu4.13_amd64.deb ...
+==> default: Unpacking apache2 (2.4.7-1ubuntu4.13) ...
+==> default: Selecting previously unselected package libhtml-template-perl.
+==> default: Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...
+==> default: Unpacking libhtml-template-perl (2.95-1) ...
+==> default: Selecting previously unselected package mysql-common-5.6.
+==> default: Preparing to unpack .../mysql-common-5.6_5.6.33-0ubuntu0.14.04.1_all.deb ...
+==> default: Unpacking mysql-common-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Selecting previously unselected package python2.7-dev.
+==> default: Preparing to unpack .../python2.7-dev_2.7.6-8ubuntu0.2_amd64.deb ...
+==> default: Unpacking python2.7-dev (2.7.6-8ubuntu0.2) ...
+==> default: Selecting previously unselected package ssl-cert.
+==> default: Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+==> default: Unpacking ssl-cert (1.0.33) ...
+==> default: Selecting previously unselected package unzip.
+==> default: Preparing to unpack .../unzip_6.0-9ubuntu1.5_amd64.deb ...
+==> default: Unpacking unzip (6.0-9ubuntu1.5) ...
+==> default: Processing triggers for ureadahead (0.100.0-16) ...
+==> default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> default: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> default: Processing triggers for mime-support (3.54ubuntu1.1) ...
+==> default: Setting up libaio1:amd64 (0.3.109-4) ...
+==> default: Setting up libapr1:amd64 (1.5.0-1) ...
+==> default: Setting up libaprutil1:amd64 (1.5.3-1) ...
+==> default: Setting up libmysqlclient18:amd64 (5.5.53-0ubuntu0.14.04.1) ...
+==> default: Setting up libexpat1-dev:amd64 (2.1.0-4ubuntu1.3) ...
+==> default: Setting up libpython2.7-dev:amd64 (2.7.6-8ubuntu0.2) ...
+==> default: Setting up libdbi-perl (1.630-1) ...
+==> default: Setting up libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+==> default: Setting up libterm-readkey-perl (2.31-1) ...
+==> default: Setting up mysql-client-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Setting up mysql-client-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Setting up mysql-server-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Setting up mysql-server-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: 2016-11-07 18:38:58 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+==> default: 2016-11-07 18:38:58 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+==> default: 2016-11-07 18:38:58 0 [Note] /usr/sbin/mysqld (mysqld 5.6.33-0ubuntu0.14.04.1) starting as process 6188 ...
+==> default: mysql start/running, process 6309
+==> default: Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> default: Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> default: Setting up apache2-bin (2.4.7-1ubuntu4.13) ...
+==> default: Setting up apache2-data (2.4.7-1ubuntu4.13) ...
+==> default: Setting up apache2 (2.4.7-1ubuntu4.13) ...
+==> default: Enabling module mpm_event.
+==> default: Enabling module authz_core.
+==> default: Enabling module authz_host.
+==> default: Enabling module authn_core.
+==> default: Enabling module auth_basic.
+==> default: Enabling module access_compat.
+==> default: Enabling module authn_file.
+==> default: Enabling module authz_user.
+==> default: Enabling module alias.
+==> default: Enabling module dir.
+==> default: Enabling module autoindex.
+==> default: Enabling module env.
+==> default: Enabling module mime.
+==> default: Enabling module negotiation.
+==> default: Enabling module setenvif.
+==> default: Enabling module filter.
+==> default: Enabling module deflate.
+==> default: Enabling module status.
+==> default: Enabling conf charset.
+==> default: Enabling conf localized-error-pages.
+==> default: Enabling conf other-vhosts-access-log.
+==> default: Enabling conf security.
+==> default: Enabling conf serve-cgi-bin.
+==> default: Enabling site 000-default.
+==> default:  * Starting web server apache2
+==> default: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.0.2.15. Set the 'ServerName' directive globally to suppress this message
+==> default:  * 
+==> default: Setting up libhtml-template-perl (2.95-1) ...
+==> default: Setting up mysql-common-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+==> default: Setting up python2.7-dev (2.7.6-8ubuntu0.2) ...
+==> default: Setting up ssl-cert (1.0.33) ...
+==> default: Setting up unzip (6.0-9ubuntu1.5) ...
+==> default: Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+==> default: Processing triggers for ureadahead (0.100.0-16) ...
+==> default: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> default: --2016-11-07 18:39:12--  https://github.com/colincam/Awesome-Appliance-Repair/archive/master.zip
+==> default: Resolving github.com (github.com)... 
+==> default: 192.30.253.112
+==> default: , 
+==> default: 192.30.253.113
+==> default: Connecting to github.com (github.com)|192.30.253.112|:443... 
+==> default: connected.
+==> default: HTTP request sent, awaiting response... 
+==> default: 302 Found
+==> default: Location: https://codeload.github.com/colincam/Awesome-Appliance-Repair/zip/master [following]
+==> default: --2016-11-07 18:39:13--  https://codeload.github.com/colincam/Awesome-Appliance-Repair/zip/master
+==> default: Resolving codeload.github.com (codeload.github.com)... 
+==> default: 192.30.253.121
+==> default: , 
+==> default: 192.30.253.120
+==> default: Connecting to codeload.github.com (codeload.github.com)|192.30.253.121|:443... 
+==> default: connected.
+==> default: HTTP request sent, awaiting response... 
+==> default: 200 OK
+==> default: Length: 
+==> default: unspecified
+==> default:  [application/zip]
+==> default: Saving to: ‘master.zip’
+==> default: 
+==> default:      0K
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: . .
+==> default: ........
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   156K
+==> default: 
+==> default:     50K
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ...... .......... ...
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ..
+==> default: . .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ..  289K
+==> default:    100K ...
+==> default: .......
+==> default:  .......
+==> default: .
+==> default: .. .....
+==> default: ..
+==> default: ... ....
+==> default: ...... .......... 14.7M
+==> default:    150K .......... .
+==> default: ........
+==> default: . ......
+==> default: .... ....
+==> default: ....
+==> default: .. ......
+==> default: .
+==> default: ...
+==> default:  1.68M
+==> default: 
+==> default:    200K ........
+==> default: .. ...
+==> default: ....... .......
+==> default: .
+==> default: .
+==> default: . ...
+==> default: .....
+==> default: ..
+==> default:  ..........  390K
+==> default:    250K .......... .......... .......... .......... .
+==> default: ......... 14.0M
+==> default:    300K .......
+==> default: .
+==> default: .
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ... .......... .......... .......... 4.98M
+==> default:    350K .......... .........
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ..
+==> default: ..
+==> default:  .......... 4.17M
+==> default:    400K .......... .
+==> default: ......
+==> default: ..
+==> default: . .
+==> default: .
+==> default: .
+==> default: ......
+==> default: .
+==> default:  .......... ..........  379K
+==> default:    450K .......... .......... ..........
+==> default:  .
+==> default: ....
+==> default: .
+==> default: ....
+==> default:  ......
+==> default: .... 11.0M
+==> default: 
+==> default:    500K .......... .......... .......... .......... .......... 7.33M
+==> default:    550K ...
+==> default: .
+==> default: .
+==> default: .
+==> default: .... .........
+==> default: .
+==> default:  
+==> default: .......... .....
+==> default: ..... .......... 2.48M
+==> default:    600K .
+==> default: ......... .......
+==> default: ... .......... ...
+==> default: .
+==> default: ......
+==> default:  ..
+==> default: ......
+==> default: .. 27.2M
+==> default: 
+==> default:    650K .......... .......... ........
+==> default: .. .
+==> default: ........
+==> default: . .......... 5.46M
+==> default: 
+==> default:    700K .....
+==> default: ..                                                12.4M=0.9s
+==> default: 
+==> default: 2016-11-07 18:39:14 (830 KB/s) - ‘master.zip’ saved [724286]
+==> default: Archive:  master.zip
+==> default: 22672c6ccf8f0d9effc9f07d4f2081b4be884060
+==> default:    creating: Awesome-Appliance-Repair-master/
+==> default:   inflating: Awesome-Appliance-Repair-master/.gitignore  
+==> default: 
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/
+==> default:  extracting: Awesome-Appliance-Repair-master/AAR/__init__.py  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/awesomeapp.py  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/awesomeapp.wsgi  
+==> default:  extracting: Awesome-Appliance-Repair-master/AAR/robots.txt  
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/static/
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/AAR.css  
+==> default: 
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/static/images/
+==> default:  extracting: Awesome-Appliance-Repair-master/AAR/static/images/aar_logo1.png  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/images/bubble.png  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/images/bubble400px.png  
+==> default:  extracting: Awesome-Appliance-Repair-master/AAR/static/images/close.png  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/images/fridge.png  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/images/range.png  
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/static/js/
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/js/AAR.js  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/js/jquery-1.10.2.js  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/js/jquery.tablesorter.min.js  
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/static/sorter-blue/
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/sorter-blue/asc.gif  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/sorter-blue/bg.gif  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/sorter-blue/desc.gif  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/static/sorter-blue/style.css  
+==> default:    creating: Awesome-Appliance-Repair-master/AAR/templates/
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/templates/dispatcher.html  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/templates/layout.html  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/templates/login.html  
+==> default:   inflating: Awesome-Appliance-Repair-master/AAR/templates/repairRequest.html  
+==> default:   inflating: Awesome-Appliance-Repair-master/AARinstall.py  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/LICENSE  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/README.md  
+==> default:    creating: Awesome-Appliance-Repair-master/images/
+==> default:   inflating: Awesome-Appliance-Repair-master/images/admin_page_cropped.png  
+==> default: 
+==> default:   inflating: Awesome-Appliance-Repair-master/images/request_repair_cropped.png  
+==> default:   inflating: Awesome-Appliance-Repair-master/images/welcome_page.png  
+==> default:   inflating: Awesome-Appliance-Repair-master/make_AARdb.sql  
+==> default: Running provisioner: chef_solo...
+==> default: Detected Chef (latest) is already installed
+==> default: Generating chef JSON and uploading...
+==> default: Running chef-solo...
+==> default: stdin: is not a tty
+==> default: [2016-11-07T18:39:20+00:00] INFO: Forking chef instance to converge...
+==> default: Starting Chef Client, version 12.9.41
+==> default: [2016-11-07T18:39:20+00:00] INFO: *** Chef 12.9.41 ***
+==> default: [2016-11-07T18:39:20+00:00] INFO: Platform: x86_64-linux
+==> default: [2016-11-07T18:39:20+00:00] INFO: Chef-client pid: 7037
+==> default: [2016-11-07T18:39:22+00:00] INFO: Setting the run_list to ["recipe[my-first-cookbook]"] from CLI options
+==> default: [2016-11-07T18:39:22+00:00] INFO: Run List is [recipe[my-first-cookbook]]
+==> default: [2016-11-07T18:39:22+00:00] INFO: Run List expands to [my-first-cookbook]
+==> default: [2016-11-07T18:39:22+00:00] INFO: Starting Chef Run for vagrant-4be0a6b8
+==> default: [2016-11-07T18:39:22+00:00] INFO: Running start handlers
+==> default: [2016-11-07T18:39:22+00:00] INFO: Start handlers complete.
+==> default: Installing Cookbook Gems:
+==> default: Compiling Cookbooks...
+==> default: Converging 9 resources
+==> default: [2016-11-07T18:39:22+00:00] INFO: Running queued delayed notifications before re-raising exception
+==> default: 
+==> default: Running handlers:
+==> default: [2016-11-07T18:39:22+00:00] ERROR: Running exception handlers
+==> default: Running handlers complete
+==> default: [2016-11-07T18:39:22+00:00] ERROR: Exception handlers complete
+==> default: Chef Client failed. 0 resources updated in 02 seconds
+==> default: [2016-11-07T18:39:22+00:00] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+==> default: [2016-11-07T18:39:22+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+==> default: [2016-11-07T18:39:22+00:00] ERROR: resource cookbook_file[/etc/apache2/sites-enabled/AAR-apache.conf] is configured to notify resource service[apache2] with action restart, but service[apache2] cannot be found in the resource collection. cookbook_file[/etc/apache2/sites-enabled/AAR-apache.conf] is defined in /tmp/vagrant-chef/2d05d668f963853fa5743ece0e4ee7f9/cookbooks/my-first-cookbook/recipes/default.rb:22:in `from_file'
+==> default: [2016-11-07T18:39:23+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+Chef never successfully completed! Any errors should be visible in the
+output above. Please fix your recipes so that they properly complete.
+

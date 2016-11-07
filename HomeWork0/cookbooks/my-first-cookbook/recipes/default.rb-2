@@ -7,9 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-template '/opt/test-task1.txt'
 
-template '/opt/test-task1.txt' do
+template '/opt/opsSchool/test-task1.txt' do
   source 'test-task1.erb'
   variables({
 	:package_name => "unzip",
