@@ -1,0 +1,108 @@
+I, [2016-11-07T22:46:21.594051 #9715]  INFO -- Kitchen: -----> Starting Kitchen (v1.13.2)
+I, [2016-11-07T22:46:24.716784 #9715]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
+E, [2016-11-07T22:46:24.766079 #9715] ERROR -- Kitchen: ------Exception-------
+E, [2016-11-07T22:46:24.766150 #9715] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-07T22:46:24.766188 #9715] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Failed to complete #converge action: [The resource at '/home/hezi/repos/session-chef/HomeWork2/</home/hezi/repos/session-chef/HomeWork0/cookbooks/my-first-cookbook>' does not appear to be a valid cookbook. Does it have a metadata.rb?] on default-ubuntu-1404
+E, [2016-11-07T22:46:24.766224 #9715] ERROR -- Kitchen: ----------------------
+E, [2016-11-07T22:46:24.766259 #9715] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-07T22:46:24.766333 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:187:in `report_errors'
+E, [2016-11-07T22:46:24.766376 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:178:in `run_action'
+E, [2016-11-07T22:46:24.766412 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command/action.rb:39:in `block in call'
+E, [2016-11-07T22:46:24.766447 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-11-07T22:46:24.766482 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command/action.rb:37:in `call'
+E, [2016-11-07T22:46:24.766517 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-11-07T22:46:24.766551 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/cli.rb:186:in `block (2 levels) in <class:CLI>'
+E, [2016-11-07T22:46:24.766586 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-11-07T22:46:24.766621 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-11-07T22:46:24.766656 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/cli.rb:334:in `invoke_task'
+E, [2016-11-07T22:46:24.766690 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-11-07T22:46:24.766725 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-11-07T22:46:24.766760 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-11-07T22:46:24.767344 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/errors.rb:174:in `with_friendly_errors'
+E, [2016-11-07T22:46:24.767388 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/bin/kitchen:13:in `<top (required)>'
+E, [2016-11-07T22:46:24.767425 #9715] ERROR -- Kitchen: /bin/kitchen:21:in `load'
+E, [2016-11-07T22:46:24.767460 #9715] ERROR -- Kitchen: /bin/kitchen:21:in `<main>'
+E, [2016-11-07T22:46:24.767494 #9715] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-11-07T22:46:24.767527 #9715] ERROR -- Kitchen: -Composite Exception--
+E, [2016-11-07T22:46:24.767561 #9715] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-07T22:46:24.767594 #9715] ERROR -- Kitchen: Message: Failed to complete #converge action: [The resource at '/home/hezi/repos/session-chef/HomeWork2/</home/hezi/repos/session-chef/HomeWork0/cookbooks/my-first-cookbook>' does not appear to be a valid cookbook. Does it have a metadata.rb?] on default-ubuntu-1404
+E, [2016-11-07T22:46:24.767630 #9715] ERROR -- Kitchen: ----------------------
+E, [2016-11-07T22:46:24.767665 #9715] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-07T22:46:24.767711 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/base.rb:59:in `validate_cached!'
+E, [2016-11-07T22:46:24.767749 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2016-11-07T22:46:24.767785 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:184:in `block in download_locations'
+E, [2016-11-07T22:46:24.767820 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `each'
+E, [2016-11-07T22:46:24.767861 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `download_locations'
+E, [2016-11-07T22:46:24.767897 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:154:in `install_from_universe'
+E, [2016-11-07T22:46:24.767931 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:39:in `run'
+E, [2016-11-07T22:46:24.767966 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:422:in `install'
+E, [2016-11-07T22:46:24.768000 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:631:in `block in vendor'
+E, [2016-11-07T22:46:24.768035 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/tmpdir.rb:89:in `mktmpdir'
+E, [2016-11-07T22:46:24.768069 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:629:in `vendor'
+E, [2016-11-07T22:46:24.768103 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:70:in `block in resolve'
+E, [2016-11-07T22:46:24.768139 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-11-07T22:46:24.768173 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:65:in `resolve'
+E, [2016-11-07T22:46:24.768207 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:333:in `block in resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.768247 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `synchronize'
+E, [2016-11-07T22:46:24.768300 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.768352 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:264:in `prepare_cookbooks'
+E, [2016-11-07T22:46:24.768389 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:52:in `populate'
+E, [2016-11-07T22:46:24.768424 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_base.rb:127:in `create_sandbox'
+E, [2016-11-07T22:46:24.768458 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_solo.rb:44:in `create_sandbox'
+E, [2016-11-07T22:46:24.768493 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:68:in `call'
+E, [2016-11-07T22:46:24.768528 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2016-11-07T22:46:24.768562 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2016-11-07T22:46:24.768606 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2016-11-07T22:46:24.768643 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-11-07T22:46:24.768683 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2016-11-07T22:46:24.768719 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2016-11-07T22:46:24.768754 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2016-11-07T22:46:24.768789 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2016-11-07T22:46:24.768824 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2016-11-07T22:46:24.768859 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-11-07T22:46:24.768894 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-07T22:46:24.768928 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-07T22:46:24.768963 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-07T22:46:24.768997 #9715] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-11-07T22:46:24.769031 #9715] ERROR -- Kitchen: ---Nested Exception---
+E, [2016-11-07T22:46:24.769069 #9715] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-07T22:46:24.769103 #9715] ERROR -- Kitchen: Message: Failed to complete #converge action: [The resource at '/home/hezi/repos/session-chef/HomeWork2/</home/hezi/repos/session-chef/HomeWork0/cookbooks/my-first-cookbook>' does not appear to be a valid cookbook. Does it have a metadata.rb?]
+E, [2016-11-07T22:46:24.769686 #9715] ERROR -- Kitchen: ----------------------
+E, [2016-11-07T22:46:24.769723 #9715] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-07T22:46:24.769757 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/base.rb:59:in `validate_cached!'
+E, [2016-11-07T22:46:24.769791 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2016-11-07T22:46:24.769826 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:184:in `block in download_locations'
+E, [2016-11-07T22:46:24.769860 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `each'
+E, [2016-11-07T22:46:24.769894 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `download_locations'
+E, [2016-11-07T22:46:24.769928 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:154:in `install_from_universe'
+E, [2016-11-07T22:46:24.769963 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:39:in `run'
+E, [2016-11-07T22:46:24.770003 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:422:in `install'
+E, [2016-11-07T22:46:24.770038 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:631:in `block in vendor'
+E, [2016-11-07T22:46:24.770082 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/tmpdir.rb:89:in `mktmpdir'
+E, [2016-11-07T22:46:24.770118 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:629:in `vendor'
+E, [2016-11-07T22:46:24.770153 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:70:in `block in resolve'
+E, [2016-11-07T22:46:24.770187 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-11-07T22:46:24.770222 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:65:in `resolve'
+E, [2016-11-07T22:46:24.770256 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:333:in `block in resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.770338 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `synchronize'
+E, [2016-11-07T22:46:24.770379 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.770415 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:264:in `prepare_cookbooks'
+E, [2016-11-07T22:46:24.770454 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:52:in `populate'
+E, [2016-11-07T22:46:24.770489 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_base.rb:127:in `create_sandbox'
+E, [2016-11-07T22:46:24.770523 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_solo.rb:44:in `create_sandbox'
+E, [2016-11-07T22:46:24.770558 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:68:in `call'
+E, [2016-11-07T22:46:24.770592 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2016-11-07T22:46:24.770627 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2016-11-07T22:46:24.770661 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2016-11-07T22:46:24.770695 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-11-07T22:46:24.770729 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2016-11-07T22:46:24.770763 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2016-11-07T22:46:24.770800 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2016-11-07T22:46:24.770837 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2016-11-07T22:46:24.770871 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2016-11-07T22:46:24.770906 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-11-07T22:46:24.770939 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-07T22:46:24.770981 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-07T22:46:24.771017 #9715] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-07T22:46:24.771051 #9715] ERROR -- Kitchen: ----End Backtrace-----

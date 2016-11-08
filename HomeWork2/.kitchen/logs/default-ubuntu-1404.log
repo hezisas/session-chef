@@ -1,0 +1,46 @@
+I, [2016-11-07T22:46:24.716910 #9715]  INFO -- default-ubuntu-1404: -----> Converging <default-ubuntu-1404>...
+I, [2016-11-07T22:46:24.717969 #9715]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2016-11-07T22:46:24.718176 #9715]  INFO -- default-ubuntu-1404: Preparing dna.json
+I, [2016-11-07T22:46:24.718689 #9715]  INFO -- default-ubuntu-1404: Resolving cookbook dependencies with Berkshelf 5.1.0...
+E, [2016-11-07T22:46:24.760215 #9715] ERROR -- default-ubuntu-1404: Converge failed on instance <default-ubuntu-1404>.
+E, [2016-11-07T22:46:24.760450 #9715] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2016-11-07T22:46:24.760494 #9715] ERROR -- default-ubuntu-1404: Class: Berkshelf::NotACookbook
+E, [2016-11-07T22:46:24.760527 #9715] ERROR -- default-ubuntu-1404: Message: The resource at '/home/hezi/repos/session-chef/HomeWork2/</home/hezi/repos/session-chef/HomeWork0/cookbooks/my-first-cookbook>' does not appear to be a valid cookbook. Does it have a metadata.rb?
+E, [2016-11-07T22:46:24.760559 #9715] ERROR -- default-ubuntu-1404: ----------------------
+E, [2016-11-07T22:46:24.760590 #9715] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-11-07T22:46:24.760620 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/base.rb:59:in `validate_cached!'
+E, [2016-11-07T22:46:24.760652 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2016-11-07T22:46:24.760685 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:184:in `block in download_locations'
+E, [2016-11-07T22:46:24.760717 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `each'
+E, [2016-11-07T22:46:24.760749 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:181:in `download_locations'
+E, [2016-11-07T22:46:24.760780 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:154:in `install_from_universe'
+E, [2016-11-07T22:46:24.760817 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/installer.rb:39:in `run'
+E, [2016-11-07T22:46:24.760850 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:422:in `install'
+E, [2016-11-07T22:46:24.760883 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:631:in `block in vendor'
+E, [2016-11-07T22:46:24.760915 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/2.3.0/tmpdir.rb:89:in `mktmpdir'
+E, [2016-11-07T22:46:24.760946 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/berkshelf-5.1.0/lib/berkshelf/berksfile.rb:629:in `vendor'
+E, [2016-11-07T22:46:24.760978 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:70:in `block in resolve'
+E, [2016-11-07T22:46:24.761009 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-11-07T22:46:24.761041 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/berkshelf.rb:65:in `resolve'
+E, [2016-11-07T22:46:24.761073 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:333:in `block in resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.761108 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `synchronize'
+E, [2016-11-07T22:46:24.761142 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:330:in `resolve_with_berkshelf'
+E, [2016-11-07T22:46:24.761188 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:264:in `prepare_cookbooks'
+E, [2016-11-07T22:46:24.761224 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef/common_sandbox.rb:52:in `populate'
+E, [2016-11-07T22:46:24.761256 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_base.rb:127:in `create_sandbox'
+E, [2016-11-07T22:46:24.761308 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/chef_solo.rb:44:in `create_sandbox'
+E, [2016-11-07T22:46:24.761355 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:68:in `call'
+E, [2016-11-07T22:46:24.761405 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2016-11-07T22:46:24.761466 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2016-11-07T22:46:24.761518 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2016-11-07T22:46:24.761576 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-11-07T22:46:24.761625 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2016-11-07T22:46:24.761672 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2016-11-07T22:46:24.761720 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2016-11-07T22:46:24.761768 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2016-11-07T22:46:24.761815 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2016-11-07T22:46:24.761863 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2016-11-07T22:46:24.761909 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-07T22:46:24.761957 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-07T22:46:24.762010 #9715] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-07T22:46:24.762061 #9715] ERROR -- default-ubuntu-1404: ----End Backtrace-----

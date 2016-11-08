@@ -48,16 +48,21 @@ cookbook_file '/tmp/make_AARdb.sql' do
 end
 
 execute 'make_AARdb' do
-	action :nothing
-        command 'mysql -proot < /tmp/make_AARdb.sql'
+#	action :nothing
+     	command 'mysql -proot < /tmp/make_AARdb.sql'
 end
 
 execute 'CREATE USER' do
-	action :nothing
+	#action :nothing
 	command "mysql -proot -e \"CREATE USER 'aarapp'@'localhost' IDENTIFIED BY '7ERwzg7E'\""
 end
 
+#service 'apache2' do
+  	#action [:start, :enable]
+#end
+#
+#template '/etc/apache2/sites-enabled/AAR-apache.conf'
+
 template '/etc/apache2/sites-enabled/AAR-apache.conf' do
-  	action :create
-	notifies :restart, 'service[apache2]', :delayed
+  action :create
 end
